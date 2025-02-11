@@ -2,16 +2,22 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      exclude: ["**/*.stories.tsx", "**/*.test.tsx"],
+    }),
+  ],
   build: {
     lib: {
-      entry: {
-        button: path.resolve(__dirname, "src/components/ui/button.tsx"),
-      },
+      entry: "src/index.ts",
       name: "ui",
+      fileName: (format) => `ui.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

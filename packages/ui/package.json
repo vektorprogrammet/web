@@ -4,27 +4,32 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
+    "dev": "storybook dev -p 6006",
+    "build": "vite build",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
+  "types": "./dist/index.d.ts",
   "exports": {
-    "./button": {
-      "types": "./src/components/ui/button.tsx",
-      "import": "./dist/button.js"
+    ".": {
+      "import": "./dist/ui.es.js",
+      "require": "./dist/ui.umd.js"
     },
     "./tailwind.css": "./tailwind.css"
+  },
+  "files": [
+    "dist",
+    "tailwind.css"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -47,6 +52,7 @@
     "storybook": "^8.5.4",
     "tailwindcss": "^4.0.6",
     "typescript": "~5.7.2",
-    "vite": "^6.1.0"
+    "vite": "^6.1.0",
+    "vite-plugin-dts": "^4.5.0"
   }
 }
