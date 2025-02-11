@@ -5,15 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "vite build",
-    "storybook": "storybook dev -p 6006",
+    "build": "tsc && tsup",
+    "build:watch": "tsup --watch",
     "storybook:build": "storybook build"
   },
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ui.es.js",
-      "require": "./dist/ui.umd.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./tailwind.css": "./tailwind.css"
   },
@@ -34,8 +33,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
     "@chromatic-com/storybook": "^3.2.4",
+    "@repo/typescript-config": "workspace:*",
     "@storybook/addon-essentials": "^8.5.4",
     "@storybook/addon-interactions": "^8.5.4",
     "@storybook/addon-onboarding": "^8.5.4",
@@ -51,8 +50,9 @@
     "globals": "^15.14.0",
     "storybook": "^8.5.4",
     "tailwindcss": "^4.0.6",
+    "tsup": "^8.3.6",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
-    "vite-plugin-dts": "^4.5.0"
+    "yaml": "^2.7.0"
   }
 }
