@@ -11,6 +11,12 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
+  "exports": {
+    "./button": {
+      "types": "./src/components/ui/button.tsx",
+      "import": "./dist/button.js"
+    }
+  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
@@ -22,6 +28,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
     "@chromatic-com/storybook": "^3.2.4",
     "@storybook/addon-essentials": "^8.5.4",
     "@storybook/addon-interactions": "^8.5.4",

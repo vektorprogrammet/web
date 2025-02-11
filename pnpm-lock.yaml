@@ -53,6 +53,9 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3.2.4
         version: 3.2.4(react@19.0.0)(storybook@8.5.4(prettier@3.5.0))
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@storybook/addon-essentials':
         specifier: ^8.5.4
         version: 8.5.4(@types/react@19.0.8)(storybook@8.5.4(prettier@3.5.0))
