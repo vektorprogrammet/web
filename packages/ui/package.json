@@ -15,7 +15,8 @@
     "./button": {
       "types": "./src/components/ui/button.tsx",
       "import": "./dist/button.js"
-    }
+    },
+    "./tailwind.css": "./tailwind.css"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
