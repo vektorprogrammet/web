@@ -65,6 +65,9 @@ importers:
       '@storybook/addon-onboarding':
         specifier: ^8.5.4
         version: 8.5.4(storybook@8.5.4(prettier@3.5.0))
+      '@storybook/addon-themes':
+        specifier: ^8.5.4
+        version: 8.5.4(storybook@8.5.4(prettier@3.5.0))
       '@storybook/blocks':
         specifier: ^8.5.4
         version: 8.5.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.4(prettier@3.5.0))
@@ -660,6 +663,11 @@ packages:
 
   '@storybook/addon-outline@8.5.4':
     resolution: {integrity: sha512-DSrTzQpCObZ9Af3djJPWVkBxvUfkBtMMeXKaGazOZem90vk2r1Q2PRaX8J/xhWxMhZtvjQuYexAyn5O7JxdaWA==}
+    peerDependencies:
+      storybook: ^8.5.4
+
+  '@storybook/addon-themes@8.5.4':
+    resolution: {integrity: sha512-UjJttiT30BTBsvaaoKdf/YcR4thEwnyOmibc2GuAEP7ZkJDjYt8+2QSPdH8Smyjt+eEV4YcjMFNDEZZxhNE9aw==}
     peerDependencies:
       storybook: ^8.5.4
 
@@ -2616,6 +2624,11 @@ snapshots:
   '@storybook/addon-outline@8.5.4(storybook@8.5.4(prettier@3.5.0))':
     dependencies:
       '@storybook/global': 5.0.0
+      storybook: 8.5.4(prettier@3.5.0)
+      ts-dedent: 2.2.0
+
+  '@storybook/addon-themes@8.5.4(storybook@8.5.4(prettier@3.5.0))':
+    dependencies:
       storybook: 8.5.4(prettier@3.5.0)
       ts-dedent: 2.2.0
 
