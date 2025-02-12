@@ -1,0 +1,21 @@
+{
+  "name": "@vektor/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "tsconfig:init": "tsc --init"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@tsconfig/recommended": "^1.0.8",
+    "@tsconfig/strictest": "^2.0.5",
+    "@tsconfig/vite-react": "^3.4.0"
+  }
+}
