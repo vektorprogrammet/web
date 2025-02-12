@@ -1,8 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": [
-    "./base.json",
-    "@tsconfig/vite-react/tsconfig.json"
-  ],
+  "extends": ["./base.json", "@tsconfig/vite-react/tsconfig.json"],
   "exclude": ["dist"]
 }
