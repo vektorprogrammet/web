@@ -40,8 +40,6 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0
 
-  packages/typescript-config: {}
-
   packages/ui:
     dependencies:
       '@radix-ui/react-slot':
@@ -75,9 +73,6 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3.2.4
         version: 3.2.4(react@19.0.0)(storybook@8.5.4(prettier@3.5.0))
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@storybook/addon-a11y':
         specifier: ^8.5.4
         version: 8.5.4(storybook@8.5.4(prettier@3.5.0))
