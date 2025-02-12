@@ -16,7 +16,10 @@
     },
     "./tailwind.css": "./tailwind.css"
   },
-  "files": ["dist", "tailwind.css"],
+  "files": [
+    "dist",
+    "tailwind.css"
+  ],
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -27,11 +30,13 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vitest": "^3.0.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
     "@repo/typescript-config": "workspace:*",
+    "@storybook/addon-a11y": "^8.5.4",
     "@storybook/addon-essentials": "^8.5.4",
     "@storybook/addon-interactions": "^8.5.4",
     "@storybook/addon-onboarding": "^8.5.4",
@@ -40,11 +45,13 @@
     "@storybook/react": "^8.5.4",
     "@storybook/react-vite": "^8.5.4",
     "@storybook/test": "^8.5.4",
+    "@storybook/test-runner": "^0.21.0",
     "@tailwindcss/vite": "^4.0.6",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "axe-playwright": "^2.1.0",
     "globals": "^15.14.0",
     "storybook": "^8.5.4",
     "tailwindcss": "^4.0.6",
