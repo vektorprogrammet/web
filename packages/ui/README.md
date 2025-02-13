@@ -9,10 +9,6 @@ Test components with [Storybook](https://storybook.js.org/) to ensure expected f
 
 ## Scripts
 
-### pnpm dev
-
-Run Storybook in development mode
-
 ### pnpm build
 
 Build the ui components for export use
@@ -20,6 +16,10 @@ Build the ui components for export use
 ### pnpm build:watch
 
 Build the ui components and rebuild automatically on source code changes
+
+### pnpm storybook:dev
+
+Run Storybook in development mode
 
 ### pnpm storybook:build
 

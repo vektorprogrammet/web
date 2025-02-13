@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "storybook dev -p 6006",
     "build": "tsc && tsup",
     "build:watch": "tsup --watch",
+    "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
   "exports": {
