@@ -1,84 +1,66 @@
-# Turborepo starter
+# Vektor Web
 
-This Turborepo starter is maintained by the Turborepo core team.
+[Turborepo](https://turbo.build/) [monorepo](https://monorepo.tools/) containing all of Vektors web code
 
-## Using this example
+New? Take a minute to learn about the [prerequisite](#prerequisite) knowledge about the project
 
-Run the following command:
+## Scripts
 
-```sh
-npx create-turbo@latest
-```
+### pnpm build
 
-## What's inside?
+Builds all `turbo.json` specified projects in `apps` and `packages`
 
-This Turborepo includes the following packages/apps:
+### pnpm dev
 
-### Apps and Packages
+Runs all `turbo.json` specified projects in development mode
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### pnpm lint
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Reports code faults in ALL projects
 
-### Utilities
+### pnpm lint:fix
 
-This Turborepo has some additional tools already setup for you:
+Fixes safe code faults in ALL projects
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### pnpm format
 
-### Build
+Fixes code style issues in ALL projects
 
-To build all apps and packages, run the following command:
+### pnpm format-and-lint
 
-```
-cd my-turborepo
-pnpm build
-```
+Reports code faults and code style issues in ALL projects
 
-### Develop
+### pnpm format-and-lint:fix
 
-To develop all apps and packages, run the following command:
+Fixes safe code faults and code style issues in ALL projects
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Prerequisite
 
-### Remote Caching
+ALL code is in written in Typescript
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+The monorepo is maintained using [Turborepo](https://turbo.build/)
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+### Project Structure
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+- `apps/*`: deployed packages without sharing code
+- `packages/*`: internal packages of shared code
+- `turbo.json`: config for root scripts
 
-```
-cd my-turborepo
-npx turbo login
-```
+We follow the Turborepo convention where `apps/` contain Application Packages and `packages/` contain Internal Packages.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+Make sure you understand the difference by reading the official Turborepo [documentation](https://turbo.build/repo/docs/core-concepts/package-types)
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+### Packages
 
-```
-npx turbo link
-```
+- `apps`
+  - `api`: internal REST api for essential data
+  - `cms`: Content Management System for managing `homepage` content
+  - `dashboard`: dashboard app for internal members
+  - `homepage`: landing website
+- `packages`
+  - `tsconfig`: shared TypeScript configuration files
+    - [`README.md`](./packages/tsconfig/README.md)
+  - `ui`: reusable React ui components
+    - [`README.md`](./packages/ui/README.md)
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+To import internal packages, prefix the imports with `@vektor/{package_name}` for example `@vektor/ui`
