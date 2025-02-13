@@ -26,6 +26,7 @@
     },
     "//#check:lint": {},
     "//#check:lint:fix": {},
+    "//#check:lint:fix:unsafe": {},
     "//#check:format": {},
     "//#check:format:fix": {}
   }

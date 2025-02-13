@@ -8,6 +8,7 @@
     "check:fix": "biome check . --write",
     "check:lint": "biome lint .",
     "check:lint:fix": "biome lint . --write",
+    "check:lint:fix:unsafe": "biome lint . --write --unsafe",
     "check:format": "biome format .",
     "check:format:fix": "biome format . --write"
   },
