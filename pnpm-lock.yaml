@@ -11,9 +11,6 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
-      prettier:
-        specifier: ^3.5.0
-        version: 3.5.0
       turbo:
         specifier: ^2.4.1
         version: 2.4.1
@@ -6576,7 +6573,8 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier@3.5.0: {}
+  prettier@3.5.0:
+    optional: true
 
   pretty-format@27.5.1:
     dependencies:
