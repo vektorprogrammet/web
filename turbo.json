@@ -20,12 +20,13 @@
       "cache": false,
       "persistent": true
     },
-    "//#lint": {},
-    "//#lint:fix": {},
-    "//#format": {},
-    "//#format-and-lint": {},
-    "//#format-and-lint:fix": {
+    "//#check": {},
+    "//#check:fix": {
       "cache": false
-    }
+    },
+    "//#check:lint": {},
+    "//#check:lint:fix": {},
+    "//#check:format": {},
+    "//#check:format:fix": {}
   }
 }
