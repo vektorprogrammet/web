@@ -21,8 +21,8 @@
     "tailwind.css"
   ],
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -31,7 +31,7 @@
     "lucide-react": "^0.475.0",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
-    "vitest": "^3.0.5"
+    "vitest": "catalog:"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
@@ -45,19 +45,19 @@
     "@storybook/react-vite": "^8.5.4",
     "@storybook/test": "^8.5.4",
     "@storybook/test-runner": "^0.21.0",
-    "@tailwindcss/vite": "^4.0.6",
-    "@types/node": "^22.13.1",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@tailwindcss/vite": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "@vektor/tsconfig": "workspace:*",
     "@vitejs/plugin-react": "^4.3.4",
     "axe-playwright": "^2.1.0",
     "globals": "^15.14.0",
     "storybook": "^8.5.4",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "catalog:",
     "tsup": "^8.3.6",
-    "typescript": "~5.7.2",
-    "vite": "^6.1.0",
+    "typescript": "catalog:",
+    "vite": "catalog:",
     "yaml": "^2.7.0"
   }
 }

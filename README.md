@@ -42,8 +42,9 @@ The monorepo is maintained using [Turborepo](https://turbo.build/)
 
 ### Project Structure
 
-- `apps/*`: deployed packages without sharing code
-- `packages/*`: internal packages of shared code
+- `apps/*`: deployed [application packages](https://turbo.build/repo/docs/core-concepts/package-types#application-packages) without sharing code
+- `packages/*`: [internal packages](https://turbo.build/repo/docs/core-concepts/internal-packages) of shared code
+- `pnpm-workspace.yaml`: config for using pnpm [workspaces](https://pnpm.io/workspaces) and [catalogs](https://pnpm.io/catalogs)
 - `turbo.json`: config for root scripts
 
 We follow the Turborepo convention where `apps/` contain Application Packages and `packages/` contain Internal Packages.
